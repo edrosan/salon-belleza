@@ -15,11 +15,21 @@ return new class extends Migration
     {
         Schema::create('REGISTROS', function (Blueprint $table) {
             $table->id();
-            $table->string('NOMBRE');
+            $table->string('nombre')->require;
+            $table->string('apellido')->require;
+            $table->string('alias')->unique;
+            $table->string('calle')->require;
+            $table->string('numero')->require;
+            $table->string('colonia')->require;
+            $table->string('cp')->require;
+            $table->string('celular')->require;
+            $table->string('local')->require;
+            $table->string('correo')->require;
+            $table->string('password')->require;
             $table->timestamps();
         });
     }
-
+// 
     /**
      * Reverse the migrations.
      *

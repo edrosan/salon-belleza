@@ -1,16 +1,36 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+
+const withMT = require("@material-tailwind/html/utils/withMT");
+
+ 
+module.exports = withMT({
   content: [
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue",
-  ],
+    "./resources/**/*.html"],
   theme: {
-    extend: {
-      
-    },
+    extend: {},
   },
   plugins: [
-    // require('@tailwindcss/aspect-ratio')
+    require('flowbite/plugin')
   ],
-}
+});
+
+// module.exports = {
+//   content: [
+//     "./resources/**/*.blade.php",
+//     "./resources/**/*.js",
+//     "./resources/**/*.vue",
+//   ],
+//   theme: {
+//     extend: {
+      
+//     },
+//   },
+//   plugins: [
+//     // require('@tailwindcss/aspect-ratio')
+//   ],
+// }
+
+

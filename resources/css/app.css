@@ -9,3 +9,13 @@
     margin: 0;
   }
 }
+
+/* Se sobrescribe el color del dia actual en el calendario */
+.fc .fc-daygrid-day.fc-day-today {
+  background: #E5EDFF !important;
+} 
+
+/* Se sobrescribe el color de los botones del calendario */
+.fc-button-primary {
+  background: #362F78 !important;
+}

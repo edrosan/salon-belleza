@@ -1,0 +1,1 @@
+let botonesEliminar = document.getElementsByClassName('bt-eliminar');
