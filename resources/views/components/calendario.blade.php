@@ -58,6 +58,7 @@
 
     headerToolbar: {
       left: 'prev,next today',
+      center: 'title',
       right: 'dayGridMonth,listWeek'
     },
 
@@ -80,7 +81,7 @@
         child = selectHorasDisponibles.lastElementChild;
       }
 
-      // Obtiene las horas disponibles en el dia seleccionado
+      //* Obtiene las horas disponibles en el dia seleccionado
       if (new Date(fechaSeleccionada) < new Date(fechaActual)) {
         console.log("Fecha pasada")
         console.log(fechaSeleccionada);

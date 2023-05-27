@@ -73,7 +73,7 @@ class ServicioController extends Controller
 
         $servicios = Servicio::all();
         foreach ($servicios as $servicio) {
-            $servicio->precio = ($servicio->precio - $servicio->precio * $descuento);
+            $servicio->precio = ($servicio->precio - ($servicio->precio * $descuento));
         }
         return ($servicios);
     }

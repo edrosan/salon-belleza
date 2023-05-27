@@ -82,6 +82,7 @@
     });
   }
 
+  // Obtiene los datos desde la URL de los servicios
   function obtenerDatos() {
     fetch(url)
         .then((response) => response.json())
@@ -146,13 +147,15 @@
   //* URL para obtener los servicios
   let url = "http://127.0.0.1:8000/get/servicios";
 
-  let listaServicios = document.getElementById("lista-servicios-0");
-  const primerServicio = document.getElementById("servicio-0");
-  const primerBotonEliminar = document.getElementById("eliminar-0");
-  let inputPrecio = document.getElementById("precio");
-  let inputDuracion = document.getElementById("duracion");
-  let selectHorasDisponibles = document.getElementById("lista-horas");
-  const seccionServicios = document.getElementById("seccion-servicios");
+  let $ = selector => document.getElementById(selector);
+
+  let listaServicios = $("lista-servicios-0");
+  const primerServicio = $("servicio-0");
+  const primerBotonEliminar = $("eliminar-0");
+  let inputPrecio = $("precio");
+  let inputDuracion = $("duracion");
+  let selectHorasDisponibles = $("lista-horas")
+  const seccionServicios = $("seccion-servicios");
 
   listaServicioListener(listaServicios);
 
@@ -187,9 +190,4 @@
     seccionServicios.appendChild(nuevoServicio);
 
   });
-</script>
-
-<!-- //* Codigo para el boton para eliminar un servicio -->
-<script>
-  
 </script>

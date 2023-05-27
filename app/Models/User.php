@@ -14,6 +14,10 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
     use HasRoles;
 
+    /** //! Para agregar el role de "admin" se debe realizar desde la base de datos
+     * en la tabla "model_has_roles" agregando el role "1" y el "id" del usuario. 
+     * */  
+
 
     /**
      * The attributes that are mass assignable.

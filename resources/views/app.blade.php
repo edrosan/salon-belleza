@@ -14,10 +14,10 @@
   <title>Salón de belleza</title>
 </head>
 
-<body class=" bg-[#fffbff] min-h-screen flex flex-col">
+<body class=" bg-white min-h-screen flex flex-col">
 
   <div class="min-h-full">
-    <nav class="bg-[#fffbff]	" x-data="{ open: false}">
+    <nav class="bg-white" x-data="{ open: false}">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
           <div class="flex items-center">
@@ -27,24 +27,24 @@
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
 
-                <a href="{{ route('inicio') }}" class="bg-[#fffbff] text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                <a href="{{ route('inicio') }}" class="bg-white text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
 
-                <a href="{{ route('galeria') }}" class="bg-[#fffbff] text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] px-3 py-2 rounded-md text-sm font-medium">Galería</a>
+                <a href="{{ route('galeria') }}" class="bg-white text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] px-3 py-2 rounded-md text-sm font-medium">Galería</a>
 
-                <a href="{{ route('servicios') }}" class="bg-[#fffbff] text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] px-3 py-2 rounded-md text-sm font-medium">Servicios</a>
+                <a href="{{ route('servicios') }}" class="bg-white text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] px-3 py-2 rounded-md text-sm font-medium">Servicios</a>
 
-                <a href="{{ route('productos') }}" class="bg-[#fffbff] text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] px-3 py-2 rounded-md text-sm font-medium">Productos</a>
+                <a href="{{ route('productos') }}" class="bg-white text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] px-3 py-2 rounded-md text-sm font-medium">Productos</a>
 
                 @auth
-                <a href="{{ route('citas') }}" class="bg-[#fffbff] text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] px-3 py-2 rounded-md text-sm font-medium">Citas</a>
+                <a href="{{ route('citas') }}" class="bg-white text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] px-3 py-2 rounded-md text-sm font-medium">Citas</a>
 
-                <a href="{{ route('agendar') }}" class="text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] block px-3 py-2 rounded-md text-base font-medium">Agendar</a>
+                <a href="{{ route('agendar') }}" class="text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] block px-3 py-2 rounded-md text-sm font-medium">Agendar</a>
                 @role('admin')
-                <a href="{{ route('clientes') }}" class="text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] block px-3 py-2 rounded-md text-base font-medium">Clientes</a>
+                <a href="{{ route('clientes') }}" class="text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] block px-3 py-2 rounded-md text-sm font-medium">Clientes</a>
                 @endrole
                 @endauth
 
-                <a href="{{ route('contacto') }}" class="bg-[#fffbff] text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+                <a href="{{ route('contacto') }}" class="bg-white text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
               </div>
             </div>
           </div>
@@ -77,14 +77,14 @@
 
           @else
           <div>
-            <a href="{{ route('register') }}" class="bg-[#fffbff] text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] px-3 py-2 rounded-md text-sm font-medium">Registro</a>
-            <a href="{{ route('login') }}" class="bg-[#fffbff] text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] px-3 py-2 rounded-md text-sm font-medium">Login</a>
+            <a href="{{ route('register') }}" class="bg-white text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] px-3 py-2 rounded-md text-sm font-medium">Registro</a>
+            <a href="{{ route('login') }}" class="bg-white text-[#1b1b1f] hover:bg-[#dfe0ff] hover:text-[#000d5f] px-3 py-2 rounded-md text-sm font-medium">Login</a>
           </div>
           @endauth
 
           <div class="-mr-2 flex md:hidden">
             <!-- Mobile menu button -->
-            <button x-on:click="open = !open" type="button" class="inline-flex items-center justify-center rounded-md bg-[#77536c] p-2 text-[#ffffff] hover:bg-[#5d3c54] hover:text-[#ffd7f0] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-controls="mobile-menu" aria-expanded="false">
+            <button x-on:click="open = !open" type="button" class="inline-flex items-center justify-center rounded-md bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl p-2 text-[#ffffff]  " aria-controls="mobile-menu" aria-expanded="false">
               <span class="sr-only">Open main menu</span>
               <!--
               Heroicon name: outline/bars-3
@@ -160,19 +160,13 @@
       </div>
     </nav>
 
-
-
     <main>
-
       <div class=" mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 ">
-        <!-- Replace with your content -->
+
         @yield('content')
 
-        <!-- /End replace -->
       </div>
     </main>
-
-    <!-- <script src="{{ URL::asset('js/agenda.js') }}" ></script> -->
   </div>
 
   <footer class="mt-auto p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
@@ -183,14 +177,12 @@
     </span>
 
     <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
-      
+
       <li>
         <a href="{{ route('contacto') }}" class="hover:underline">Contáctanos</a>
       </li>
     </ul>
   </footer>
-
 </body>
-
 
 </html>
